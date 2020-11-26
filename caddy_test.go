@@ -21,7 +21,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/coredns/caddy/caddyfile"
+	"github.com/inverse-inc/coredns-caddy/caddyfile"
 )
 
 /*

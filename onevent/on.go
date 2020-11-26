@@ -3,8 +3,8 @@ package onevent
 import (
 	"strings"
 
-	"github.com/coredns/caddy"
-	"github.com/coredns/caddy/onevent/hook"
+	"github.com/inverse-inc/coredns-caddy"
+	"github.com/inverse-inc/coredns-caddy/onevent/hook"
 	"github.com/google/uuid"
 )
 

@@ -17,7 +17,7 @@ package caddy
 import (
 	"strings"
 
-	"github.com/coredns/caddy/caddyfile"
+	"github.com/inverse-inc/coredns-caddy/caddyfile"
 )
 
 // Controller is given to the setup function of directives which

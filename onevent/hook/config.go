@@ -1,7 +1,7 @@
 package hook
 
 import (
-	"github.com/coredns/caddy"
+	"github.com/inverse-inc/coredns-caddy"
 )
 
 // Config describes how Hook should be configured and used.

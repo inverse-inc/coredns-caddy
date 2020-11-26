@@ -459,6 +459,15 @@ func CaddyfileFromPipe(f *os.File, serverType string) (Input, error) {
 	return nil, nil
 }
 
+// CaddyfileFromString loads the Caddyfile input from string.
+func CaddyfileFromString(f string, serverType string) (Input, error) {
+	return CaddyfileInput{
+		Contents:       []byte(f),
+		Filepath:       "ZTN",
+		ServerTypeName: serverType,
+	}, nil
+}
+
 // Caddyfile returns the Caddyfile used to create i.
 func (i *Instance) Caddyfile() Input {
 	return i.caddyfileInput

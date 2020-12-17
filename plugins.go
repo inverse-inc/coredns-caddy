@@ -388,16 +388,16 @@ func DirectiveAction(serverType, dir string) (SetupFunc, error) {
 // loaders return a non-nil Input. The default
 // loader may always return an Input value.
 type Loader interface {
-	Load(serverType string, config ...*string) (Input, error)
+	Load(serverType string) (Input, error)
 }
 
 // LoaderFunc is a convenience type similar to http.HandlerFunc
 // that allows you to use a plain function as a Load() method.
-type LoaderFunc func(serverType string, config ...*string) (Input, error)
+type LoaderFunc func(serverType string) (Input, error)
 
 // Load loads a Caddyfile.
-func (lf LoaderFunc) Load(serverType string, config *string) (Input, error) {
-	return lf(serverType, config)
+func (lf LoaderFunc) Load(serverType string) (Input, error) {
+	return lf(serverType)
 }
 
 // RegisterCaddyfileLoader registers loader named name.
